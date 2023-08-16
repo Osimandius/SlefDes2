@@ -29,7 +29,11 @@ AFRAME.registerComponent("enemy-bullets", {
 
             var scene = document.querySelector("#scene");
             scene.appendChild(enemyBullet);
-
+//NEW CONTENT!!
+            var e1 = document.querySelector("#enemy1")
+            e1.setAttribute("animation-mixer", { clip: "honk" })
+            setInterval(() => { e1.setAttribute("animation-mixer", { clip: "HoldTubaWalk" }) }, 620)
+//Back to old
 
             var position1 = new THREE.Vector3();
             var position2 = new THREE.Vector3();
